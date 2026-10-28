@@ -1,2 +1,2 @@
 # demirtas-kurbancilik
-Demirtaş Kurbancılık resmi web sitesi
+Demirtaş Kurbancılık web sitesi
