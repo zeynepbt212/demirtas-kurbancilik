@@ -1,0 +1,422 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demirtaş Kurbancılık</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f5ef;
+            color: #263528;
+        }
+
+        header {
+            background-color: #21452d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #173520;
+            padding: 16px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d6bd78;
+        }
+
+        /* ANA EKRAN */
+        .hero {
+            min-height: 450px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url("buyukbas.jpg");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 35px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2e633b;
+            color: white;
+            padding: 13px 22px;
+            margin: 10px 5px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #173520;
+        }
+
+        /* ÜRÜNLER */
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #21452d;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(260px, 1fr)
+            );
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 23px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #21452d;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        /* HAKKIMIZDA */
+        .about {
+            background-color: #e8eee5;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        /* İLETİŞİM */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        /* KONUM */
+        .location {
+            background-color: #e8eee5;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .location p {
+            margin-bottom: 15px;
+        }
+
+        /* ALT BİLGİ */
+        footer {
+            background-color: #173520;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .hero {
+                min-height: 350px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ÜST BAŞLIK -->
+    <header>
+        <h1>DEMİRTAŞ KURBANCILIK</h1>
+        <p>Güvenilir Hizmet, Kaliteli Kurbanlık</p>
+    </header>
+
+    <!-- MENÜ -->
+    <nav>
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#urunler">Kurbanlıklarımız</a>
+        <a href="#sut">Süt Satışı</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#konum">Konumumuz</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <!-- ANA EKRAN -->
+    <section class="hero" id="anasayfa">
+        <div>
+            <h2>Demirtaş Kurbancılık</h2>
+
+            <p>
+                Büyükbaş ve küçükbaş kurbanlıklarımızı keşfedin.
+                <br>
+                Süt satışı ve bilgi için bizimle iletişime geçin.
+            </p>
+
+            <a href="#urunler" class="button">
+                Ürünlerimizi İnceleyin
+            </a>
+
+            <a href="#iletisim" class="button">
+                Bize Ulaşın
+            </a>
+        </div>
+    </section>
+
+    <!-- ÜRÜNLER -->
+    <section class="container" id="urunler">
+
+        <h2 class="section-title">Kurbanlıklarımız</h2>
+
+        <div class="products">
+
+            <!-- BÜYÜKBAŞ -->
+            <div class="card">
+
+                <img
+                    src="visualstudio/buyukbas.jpg"
+                    alt="Büyükbaş Hayvanlar">
+
+                <div class="card-content">
+
+                    <h3>Büyükbaş Kurbanlık</h3>
+
+                    <p>
+                        Büyükbaş kurbanlıklarımız hakkında bilgi almak
+                        ve seçeneklerimizi öğrenmek için bize ulaşın.
+                    </p>
+
+                    <a href="#iletisim" class="button">
+                        Bilgi Al
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- KÜÇÜKBAŞ -->
+            <div class="card">
+
+                <img
+                    src="visualstudio/kucukbas.jpg"
+                    alt="Küçükbaş Hayvanlar">
+
+                <div class="card-content">
+
+                    <h3>Küçükbaş Kurbanlık</h3>
+
+                    <p>
+                        Koç ve koyun seçeneklerimiz hakkında
+                        ayrıntılı bilgi için bizimle iletişime geçin.
+                    </p>
+
+                    <a href="#iletisim" class="button">
+                        Bilgi Al
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- SÜT -->
+            <div class="card" id="sut">
+
+                <img
+                    src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=900&q=80"
+                    alt="Süt ve süt ürünleri">
+
+                <div class="card-content">
+
+                    <h3>Süt Satışı</h3>
+
+                    <p>
+                        Süt satışı ve fiyatlar hakkında
+                        bilgi almak için bize ulaşabilirsiniz.
+                    </p>
+
+                    <a href="#iletisim" class="button">
+                        Bilgi Al
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HAKKIMIZDA -->
+    <section class="about" id="hakkimizda">
+
+        <h2 class="section-title">Hakkımızda</h2>
+
+        <p>
+            Demirtaş Kurbancılık olarak İstanbul Silivri Alipaşa'da
+            büyükbaş ve küçükbaş kurbanlık satışı ile süt satışı
+            hizmeti sunuyoruz. Ürünlerimiz ve fiyatlarımız hakkında
+            bilgi almak için bizimle iletişime geçebilirsiniz.
+        </p>
+
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section class="contact" id="iletisim">
+
+        <h2 class="section-title">İletişim</h2>
+
+        <p>
+            Büyükbaş, küçükbaş kurbanlık ve süt satışı hakkında
+            bilgi almak için bizimle iletişime geçebilirsiniz.
+        </p>
+
+        <!-- TELEFON NUMARASINI BURAYA EKLE -->
+        <a href="tel:05447157164" class="button">
+            Telefonla Ara
+        </a>
+
+        <!-- WHATSAPP NUMARASINI BURAYA EKLE -->
+        <a
+            href="https://wa.me/905447157164"
+            class="button"
+            target="_blank"
+            rel="noopener">
+            WhatsApp
+        </a>
+
+    </section>
+
+    <!-- KONUM -->
+    <section class="location" id="konum">
+
+        <h2 class="section-title">Konumumuz</h2>
+
+        <p>Alipaşa, Silivri, İstanbul</p>
+
+        <a
+            href="https://www.google.com/maps/place/Demirta%C5%9F+kurbanc%C4%B1l%C4%B1k/@41.113725,28.2160615,17z/data=!4m6!3m5!1s0x14b53f7852c5a321:0xd347d9c746e22171!8m2!3d41.113725!4d28.2208251!16s%2Fg%2F11z_tqhzm6?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+            class="button"
+            target="_blank"
+            rel="noopener">
+
+            Google Haritalar'da Konumu Gör
+
+        </a>
+
+    </section>
+
+    <!-- ALT BİLGİ -->
+    <footer>
+
+        <h3>DEMİRTAŞ KURBANCILIK</h3>
+
+        <p>Alipaşa, Silivri, İstanbul</p>
+
+        <p>
+            © 2026 Demirtaş Kurbancılık
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
